@@ -6,7 +6,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: workspace
-        run: ls
+        run: ls -a
+      - name: checkout
+        uses: actions/checkout@v2.0.0
+      - name: new workspace
+        run: ls -a
       # - name: setEnv
       #   #run: echo ::set-env name=workspace::$GITHUB_WORKSPACE
       #   run: echo "workspace=$GITHUB_WORKSPACE" >> $GITHUB_ENV
