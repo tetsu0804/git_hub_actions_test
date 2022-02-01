@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: $GITHUB_WORKSPACE
-        run: echo ${ $GITHUB_WORKSPACE }
+        run: echo " $GITHUB_WORKSPACE "
       # - name: Checkout
       #   uses: actions/checkout@v2.0.0
       # - name: Set Node.js 14
