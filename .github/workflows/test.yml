@@ -5,11 +5,15 @@ jobs:
     name: testIndex
     runs-on: ubuntu-latest
     steps:
-      - name: setEnv
-        #run: echo ::set-env name=workspace::$GITHUB_WORKSPACE
-        run: echo "workspace=$GITHUB_WORKSPACE" >> $GITHUB_ENV
-      - name: echo $GITHUB_WORKSPACE
-        run: echo $workspace
+      - name: workspace
+        run: |
+          pwd
+          ls
+      # - name: setEnv
+      #   #run: echo ::set-env name=workspace::$GITHUB_WORKSPACE
+      #   run: echo "workspace=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+      # - name: echo $GITHUB_WORKSPACE
+      #   run: echo $workspace
       # - name: Checkout
       #   uses: actions/checkout@v2.0.0
       # - name: Set Node.js 14
