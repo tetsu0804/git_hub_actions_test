@@ -1,0 +1,13 @@
+name: indexTestSimple
+on: push
+jobs:
+  unit-test:
+    name: testIndex
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup node 12
+        uses: actions/setup-node@v1.3.0
+        with:
+          node-version: 12.x
+      - name: test
+        run: npm test
